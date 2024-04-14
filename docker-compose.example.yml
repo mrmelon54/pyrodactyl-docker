@@ -47,7 +47,7 @@ services:
     image: redis:alpine
     restart: always
   panel:
-    image: mrmelon54/pyrodactyl:latest
+    image: mrmelon54/pyrodactyl-panel:latest
     restart: always
     ports:
       - "80:80"
