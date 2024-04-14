@@ -6,8 +6,8 @@ COPY panel .
 RUN npm install -g pnpm turbo
 RUN npm install
 RUN pnpm ship
+RUN rm -rf /src/.git
 
 FROM ghcr.io/pterodactyl/panel:latest
 WORKDIR /app
-RUN rm -rf /src/.git
 COPY --from=builder /src/ /app/
