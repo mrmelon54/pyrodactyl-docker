@@ -1,14 +1,14 @@
-name: Release
-on:
-  release:
-    types: [released]
+name: Build
+
+on: [ push ]
+
 env:
   IMAGE_NAME: pyrodactyl-panel
+
 jobs:
   build:
     name: Build Image
     runs-on: ubuntu-20.04
-    needs: [version]
     permissions:
       packages: write
       contents: read
